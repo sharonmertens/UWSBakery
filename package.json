@@ -1,0 +1,22 @@
+{
+  "name": "uwsbakery",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sharonmertens/UWSBakery.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sharonmertens/UWSBakery/issues"
+  },
+  "homepage": "https://github.com/sharonmertens/UWSBakery#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
