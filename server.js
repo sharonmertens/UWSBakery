@@ -12,6 +12,14 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 // =======================================
+//             MIDDLEWARE
+// =======================================
+
+
+const bakedItemsController = require('./controllers/bakedItems.js');
+app.use('/bakedItems', bakedItemsController);
+
+// =======================================
 //              LISTENER
 // =======================================
 
