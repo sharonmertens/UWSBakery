@@ -18,8 +18,11 @@ router.get('/', (req, res)=>{
   });
 });
 
-// router.get('/', (req, res)=>{
-//    res.send('index');
-// });
+// delete route
+router.delete('/:id', (req, res)=>{
+  BakedItems.findByIdAndRemove(req.params.id, (err, deletedBakedItem)=>{
+    res.json(deletedBakedItem);
+  });
+});
 
 module.exports = router;
