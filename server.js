@@ -4,12 +4,20 @@
 
 const express = require('express');
 const app = express();
+const mongoose = require('mongoose');
 
 // =======================================
 //             CONFIGURATION
 // =======================================
 
 const port = process.env.PORT || 3000;
+// const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost' + 'UWSBakery';
+
+// connect to Mongo
+mongoose.connect('mongodb://localhost:27017/UWSBakery', { useNewUrlParser: true});
+mongoose.connection.once('open', ()=>{
+  console.log('connected to mongoose...');
+});
 
 // =======================================
 //             MIDDLEWARE
