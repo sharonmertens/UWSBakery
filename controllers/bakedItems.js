@@ -25,4 +25,11 @@ router.delete('/:id', (req, res)=>{
   });
 });
 
+// update route
+router.put('/:id', (req, res)=>{
+  BakedItems.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updatedBakedItem)=>{
+    res.json(updatedBakedItem);
+  });
+});
+
 module.exports = router;
