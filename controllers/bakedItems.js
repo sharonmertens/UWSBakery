@@ -18,6 +18,13 @@ router.get('/', (req, res)=>{
   });
 });
 
+// show route
+router.get('/:id', (req, res)=> {
+  BakedItems.findById(req.params.id, (err, foundBakedItem)=>{
+    res.json(foundBakedItem);
+  });
+});
+
 // delete route
 router.delete('/:id', (req, res)=>{
   BakedItems.findByIdAndRemove(req.params.id, (err, deletedBakedItem)=>{
