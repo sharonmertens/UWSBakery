@@ -23,6 +23,8 @@ mongoose.connection.once('open', ()=>{
 //             MIDDLEWARE
 // =======================================
 
+app.use(express.static('public'));
+app.use(express.json());
 
 const bakedItemsController = require('./controllers/bakedItems.js');
 app.use('/bakedItems', bakedItemsController);
